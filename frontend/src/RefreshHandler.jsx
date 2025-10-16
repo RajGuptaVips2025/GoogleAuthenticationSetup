@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+/* eslint-disable react/prop-types */
+import { useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 
 
@@ -14,7 +15,7 @@ const RefreshHandler = ({ setIsAuthenticated }) => {
         if (token) {
             setIsAuthenticated(true);
             if (location.pathname === '/' || location.pathname === '/login') {
-                navigate('/dashboard', {replace: false});
+                navigate('/dashboard', { replace: false });
             }
         }
 
